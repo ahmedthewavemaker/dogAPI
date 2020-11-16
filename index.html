@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dog API assignment V1</title>
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1> Dog API App </h1>
+
+    <form id="number">
+      <label for="picNumber">Number of pics to display (1-50)</label><br>
+      <input type="number" id="picNumber" name="picNumber" min="1" max="50" value="3"><br>
+      <input type="submit"  value="Display the dogs!" />
+    </form>
+
+    <form id="breed">
+      <label for="picBreed">Select Dog Breed</label><br>
+      <input type="text" id="picBreed" name="picBreed" />
+      <input type="submit" value="Pick your breed" />
+    </form>
+
+    <section class="images hidden">
+      <h2> Who let the dogs out!</h2>
+      <div class="results-img" alt="placeholder"></div>
+    </section>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
