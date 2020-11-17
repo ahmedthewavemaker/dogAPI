@@ -5,17 +5,26 @@ function getDogImage(inputVal) {
     fetch(dogApi)
         .then(response => response.json())
         .then(responseJson => displayMany(responseJson));
+
 }
 
 
 function displayMany(responseJson) {
     console.log(responseJson);
+    let dogArray = responseJson.message;
+    let display = getImages(dogArray);
+    $('.results-img').html(display);
+    $('.images').removeClass('hidden');
 
-    for (let i = 0; i < responseJson.message.length; i++) {
 
-        $('.results-img').html(`<img src="${responseJson.message[i]}">`)
-        $('.images').removeClass('hidden');
+}
+
+function getImages(dogArray) {
+    let value = '';
+    for (let i = 0; i < dogArray.length; i++) {
+        value += `<img src="${dogArray[i]}" class="results-img">`
     }
+    return value
 
 }
 
